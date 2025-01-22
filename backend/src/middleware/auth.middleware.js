@@ -22,4 +22,4 @@ export const requireAdmin = async (req, res, next) => {
         console.log("Error in auth middleware");
         next(error)
     }
-}
+} 
