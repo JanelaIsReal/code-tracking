@@ -1,7 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
-import {clerkmiddleware} from "@clerk/express";
-import {fileUpload} from "express-fileupload";
+import {clerkMiddleware} from "@clerk/express";
+import fileUpload from "express-fileupload";
 import path from "path";
 
 import { connectDB } from "./lib/db.js";
@@ -20,7 +20,7 @@ const app = express();
 const PORT = process.env.PORT;
 
 app.use(express.json()); //to parse req.body
-app.use(clerkmiddleware()); //this will add auth to request obj
+app.use(clerkMiddleware()); //this will add auth to request obj
 app.use(fileUpload({
     useTempFiles: true,
     tempFileDir: path.join(__dirname, "/temp"),
