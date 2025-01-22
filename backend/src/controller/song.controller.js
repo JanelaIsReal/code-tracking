@@ -6,4 +6,16 @@ export const getAllSongs = async (req, res, next) => {
     } catch (error) {
         next(error);
     }
-}
+};
+
+export const getFeaturedSongs = async (req, res, next) => {
+
+};
+
+export const getmadeForYouSongs = async (req, res, next) => {
+
+};
+
+export const getTrendingSongs = async (req, res, next) => { 
+
+};
