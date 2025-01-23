@@ -24,8 +24,7 @@ export const getStats = async (req, res) =>{
                 {
                     $count: "count"
                 }
-            ])
-        ]);
+            ])]);
         res.status(200).json({
             totalSongs,
             totalUsers,
