@@ -9,7 +9,16 @@ export const getAllSongs = async (req, res, next) => {
 };
 
 export const getFeaturedSongs = async (req, res, next) => {
+    try {
+        const songs = await Song.aggregate([{
+            $sample: {
+                size: 5
+            }a
+        }]);
 
+    } catch (error) {
+        next(error);
+    }
 };
 
 export const getmadeForYouSongs = async (req, res, next) => {
