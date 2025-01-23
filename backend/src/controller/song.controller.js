@@ -13,7 +13,7 @@ export const getFeaturedSongs = async (req, res, next) => {
         const songs = await Song.aggregate([{
             $sample: {
                 size: 5
-            }a
+            }
         }]);
 
     } catch (error) {
